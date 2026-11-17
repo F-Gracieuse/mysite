@@ -2,10 +2,59 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>My site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Web - Gracieuse</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .carte {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+        h1 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+        p {
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+        .bouton {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .bouton:hover {
+            background-color: #7dd3fc;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenue sur my girl site !</h1>
-    <p>Ceci est ma première page web.</p>
+    <div class="carte">
+        <h1>Bienvenue sur mon site !</h1>
+        <p>Cette page est hébergée gratuitement sur GitHub Pages et déployée depuis mon serveur Ubuntu.</p>
+        <a href="https://github.com" target="_blank" class="bouton">Voir mon profil GitHub</a>
+    </div>
 </body>
 </html>
+
