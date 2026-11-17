@@ -3,57 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Web - Gracieuse</title>
+    <title>Le Jardin de Gracieuse 🌹✨</title>
     <style>
+        @import url('https://googleapis.com');
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Quicksand', 'Segoe UI', sans-serif;
             margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            color: #f8fafc;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 40%, #fbcfe8 80%, #f5d0fe 100%);
+            color: #881337;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
         }
+
+        /* Décorations florales flottantes en arrière-plan */
+        .decor-flottant {
+            position: fixed;
+            font-size: 2rem;
+            opacity: 0.45;
+            user-select: none;
+            pointer-events: none;
+            animation: flotter 6s ease-in-out infinite;
+        }
+        .d1 { top: 8%; left: 10%; animation-delay: 0s; font-size: 2.4rem; }
+        .d2 { top: 15%; right: 12%; animation-delay: 1.5s; font-size: 2rem; }
+        .d3 { bottom: 12%; left: 14%; animation-delay: 3s; font-size: 2.2rem; }
+        .d4 { bottom: 18%; right: 10%; animation-delay: 2s; font-size: 2.5rem; }
+        .d5 { top: 50%; left: 5%; animation-delay: 4s; font-size: 1.8rem; }
+        .d6 { top: 45%; right: 6%; animation-delay: 1s; font-size: 1.9rem; }
+
+        @keyframes flotter {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(8deg); }
+        }
+
+        /* Carte principale */
         .carte {
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 16px;
-            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 3px solid #f9a8d4;
+            border-radius: 35px;
+            padding: 45px 35px;
             max-width: 600px;
+            width: 100%;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 45px rgba(225, 29, 72, 0.15), inset 0 0 20px rgba(251, 207, 232, 0.5);
+            position: relative;
+            z-index: 10;
         }
+
+        /* Couronne de roses en haut de la carte */
+        .couronne-fleurs {
+            font-size: 1.8rem;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #fce7f3, #ffe4e6);
+            color: #be123c;
+            border: 1px solid #fda4af;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
         h1 {
-            color: #38bdf8;
-            margin-bottom: 15px;
+            font-family: 'Pacifico', cursive;
+            color: #e11d48;
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin: 10px 0 15px 0;
+            text-shadow: 2px 2px 0px #ffe4e6;
         }
+
         p {
-            line-height: 1.6;
-            color: #cbd5e1;
+            line-height: 1.7;
+            color: #9f1239;
+            font-size: 1.05rem;
             margin-bottom: 25px;
         }
+
+        /* Petites étiquettes centres d'intérêt */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background-color: #fff1f2;
+            color: #db2777;
+            border: 1px dashed #f472b6;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
         .bouton {
             display: inline-block;
-            background-color: #38bdf8;
-            color: #0f172a;
+            background: linear-gradient(135deg, #fb7185, #e11d48);
+            color: #ffffff;
             text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            box-shadow: 0 10px 25px rgba(225, 29, 72, 0.35);
+            transition: all 0.3s ease;
         }
+
         .bouton:hover {
-            background-color: #7dd3fc;
+            background: linear-gradient(135deg, #f43f5e, #be123c);
+            box-shadow: 0 12px 30px rgba(225, 29, 72, 0.5);
+            transform: translateY(-3px) scale(1.03);
+        }
+
+        .separateur-floral {
+            margin: 28px 0 15px 0;
+            color: #fb7185;
+            font-size: 1.1rem;
+            letter-spacing: 6px;
+        }
+
+        .footer-deco {
+            font-size: 0.85rem;
+            color: #db2777;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
+    <!-- Roses, papillons et coeurs flottants -->
+    <div class="decor-flottant d1">🌹</div>
+    <div class="decor-flottant d2">🦋</div>
+    <div class="decor-flottant d3">🌸</div>
+    <div class="decor-flottant d4">🌹</div>
+    <div class="decor-flottant d5">✨</div>
+    <div class="decor-flottant d6">🌷</div>
+
     <div class="carte">
-        <h1>Bienvenue sur mon site !</h1>
-        <p>Cette page est hébergée gratuitement sur GitHub Pages et déployée depuis mon serveur Ubuntu.</p>
-        <a href="https://github.com" target="_blank" class="bouton">Voir mon profil GitHub</a>
+        <div class="couronne-fleurs">🌹🌸🌺🌸🌹</div>
+        <div class="badge">🎀 Bienvenue dans mon univers 🎀</div>
+        <h1>Coucou, moi c'est Gracieuse</h1>
+        <p>
+            Bienvenue sur mon espace web fleuri, hébergé sur GitHub Pages ! 
+            Ici, je partage ma créativité, mes projets numériques et tout ce qui m'inspire au quotidien.
+        </p>
+
+        <div class="tags">
+            <span class="tag">🌹 Créativité</span>
+            <span class="tag">💻 Projets Web</span>
+            <span class="tag">🦋 Innovation</span>
+            <span class="tag">✨ Passion</span>
+        </div>
+
+        <a href="https://github.com" target="_blank" class="bouton">🌹 Visiter mon GitHub 💖</a>
+
+        <div class="separateur-floral">‧₊˚ ⋅ 🌹 ⋅ ˚₊‧</div>
+        <div class="footer-deco">Fait avec amour et élégance par Gracieuse 🦋</div>
     </div>
 </body>
 </html>
